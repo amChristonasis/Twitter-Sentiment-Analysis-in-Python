@@ -1,8 +1,8 @@
 # Twitter-Sentiment-Analysis-in-Python
 
-Data Pipeline Architecture of Streaming Twitter Data into Apache Kafka cluster, performing simple sentiment analysis with afinn module, and finally storing the data into MongoDB. The high level architecture is pretty simple and can be seen in the following picture.
+Data Pipeline Architecture of Streaming Twitter Data into Apache Kafka cluster, performing simple sentiment analysis with TextBlob module, and subsequently storing the data into MongoDB. Finally, the results are presented in a dashboard that updates live built with Plotly and Dash. The high level architecture can be seen in the following picture.
 
-![Twitter Sentiment Analysis Pipeline in Python](https://traintestsplit.com/wp-content/uploads/twitterSentimentAnalysisPipeline.png)
+![Twitter Sentiment Analysis Pipeline in Python](https://traintestsplit.com/wp-content/uploads/Pipeline-Architecture.png)
 
 ## Pipeline Explanation
 
@@ -12,11 +12,13 @@ A selection of the relevant fields, as well as simple sentiment analysis, are do
 
 On the other end, a MongoDB consumer consumes the streaming data and stores them in MongoDB for future use. MongoDB was chosen because of the JSON format of the data.
 
+Finally, the text of the tweets, as well as simple statistics are presented in an interactive Dash dashboard that works with live updates.
+
 ## Code Explanation
 
 The kafkaTwitterStreaming.py script implements the twitter producer.
 The kafkaMongoConsumer.py implements the MongoDB consumer.
-Finally, the mongoToDf.py script connects to the MongoDB database. Subsequently, it provides the ability to save the data in pandas DataFrame format for further analysis and/or save the data in csv or other formats.
+Finally, the DashboardFinal.py script connects to the Mongo database and presents live results on a simple web dashboard.
 
 ## Instructions on Running the Code
 
@@ -33,3 +35,4 @@ The following steps should be followed in order to run the code:
 3. Run the mongodb consumer on one console, specifying the name of the topic you created, on the script.
 4. Run the twitter stream producer on a second console, after specifying the desired keyword list to fetch tweets by in the script.
 At this point, the tweets should be streaming from twitter into the Kafka topic and subsequently getting stored into MongoDB.
+5. Run the dashboard script. The results should be showing on an interactive webpage.
