@@ -80,10 +80,10 @@ if __name__ == "__main__":
           'nederland groningen','nederland gas boren','mark rutte energy','mark rutte energie','CO-2 reductie Nederland']
 
     # twitter api credentials
-	consumer_key = "bGom6qvGxBWI2Gk1PQfj4Zrxg"
-	consumer_secret = "qPpQlEeGrOoxU3hyao4coLCiU0Y04E9SdHFUCCLgOgFdfS6N5d"
-	access_token = "1141352452509372417-jTZtljPhNk865LeBgSobLIMEayqfKc"
-	access_secret = "34t7s9upXGf8znelhTWSIBQLNOsWZm0FFtvHZmyyC5NGh"
+	consumer_key = # your key here
+	consumer_secret = # your key here
+	access_token = # your key here
+	access_secret = # your key here
 
 	auth = OAuthHandler(consumer_key, consumer_secret)
 	auth.set_access_token(access_token, access_secret)
