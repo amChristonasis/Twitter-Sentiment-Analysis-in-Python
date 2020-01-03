@@ -1,5 +1,7 @@
 # Twitter-Sentiment-Analysis-in-Python
 
+I wrote a blog post with some additional information on the project here https://traintestsplit.com/twitter-sentiment-analysis-in-python-with-code/
+
 Data Pipeline Architecture of Streaming Twitter Data into Apache Kafka cluster, performing simple sentiment analysis with TextBlob module, and subsequently storing the data into MongoDB. Finally, the results are presented in a dashboard that updates live built with Plotly and Dash. The high level architecture can be seen in the following picture.
 
 ![Twitter Sentiment Analysis Pipeline in Python](https://traintestsplit.com/wp-content/uploads/Pipeline-Architecture.png)
